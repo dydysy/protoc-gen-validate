@@ -8,7 +8,7 @@ import (
 	"text/template"
 	"unicode"
 
-	"github.com/envoyproxy/protoc-gen-validate/templates/shared"
+	"github.com/dydysy/protoc-gen-validate/templates/shared"
 	"github.com/golang/protobuf/ptypes/duration"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/iancoleman/strcase"

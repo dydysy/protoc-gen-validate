@@ -5,11 +5,11 @@ import (
 
 	"github.com/lyft/protoc-gen-star"
 	"github.com/lyft/protoc-gen-star/lang/go"
-	"github.com/envoyproxy/protoc-gen-validate/templates/cc"
-	"github.com/envoyproxy/protoc-gen-validate/templates/go"
-	"github.com/envoyproxy/protoc-gen-validate/templates/gogo"
-	"github.com/envoyproxy/protoc-gen-validate/templates/java"
-	"github.com/envoyproxy/protoc-gen-validate/templates/shared"
+	"github.com/dydysy/protoc-gen-validate/templates/cc"
+	"github.com/dydysy/protoc-gen-validate/templates/go"
+	"github.com/dydysy/protoc-gen-validate/templates/gogo"
+	"github.com/dydysy/protoc-gen-validate/templates/java"
+	"github.com/dydysy/protoc-gen-validate/templates/shared"
 )
 
 type RegisterFn func(tpl *template.Template, params pgs.Parameters)

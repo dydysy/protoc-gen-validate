@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/lyft/protoc-gen-star"
 	"github.com/lyft/protoc-gen-star/lang/go"
-	"github.com/envoyproxy/protoc-gen-validate/module"
+	"github.com/dydysy/protoc-gen-validate/module"
 )
 
 func main() {

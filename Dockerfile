@@ -58,7 +58,7 @@ RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 # buildozer
 RUN go get github.com/bazelbuild/buildtools/buildozer
 
-WORKDIR ${GOPATH}/src/github.com/envoyproxy/protoc-gen-validate
+WORKDIR ${GOPATH}/src/github.com/dydysy/protoc-gen-validate
 COPY . .
 
 RUN make build
