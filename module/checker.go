@@ -283,6 +283,12 @@ func (m *Module) CheckRepeated(ft FieldType, r *validate.RepeatedRules) {
 
 	m.checkMinMax(r.MinItems, r.MaxItems)
 
+	if r.GetCoordinates() {
+		m.Assert(
+			typ.ProtoType() == pgs.DoubleT,
+			"coordinates rule is only applicable for double types")
+	}
+
 	if r.GetUnique() {
 		m.Assert(
 			!typ.Element().IsEmbed(),

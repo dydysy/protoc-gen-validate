@@ -3,6 +3,20 @@ package goshared
 const repTpl = `
 	{{ $f := .Field }}{{ $r := .Rules }}
 
+	{{ if $r.GetCoordinates }}
+		if len({{ accessor .}}) != 2 {
+			return {{ err . "coordinates value must contain exactly 2 item(s)" }}
+		}
+		coordinates := {{ accessor .}}
+		var lng, lat = coordinates[0], coordinates[1]
+		if lng > 180 || lng < -180 {
+			return {{ err . "lng value must contain between -180 and 180" }}
+		}
+		if lat > 90 || lng < -90 {
+			return {{ err . "lat value must contain between -90 and 90" }}
+		}
+	{{ end }}
+
 	{{ if $r.GetMinItems }}
 		{{ if eq $r.GetMinItems $r.GetMaxItems }}
 			if len({{ accessor . }}) != {{ $r.GetMinItems }} {
